@@ -1,5 +1,7 @@
 ﻿
 
+using System.Timers;
+
 LinqQueries queries = new LinqQueries();
 
 //Toda la colección de los libros.
@@ -26,7 +28,25 @@ LinqQueries queries = new LinqQueries();
 //ImprimirValores(queries.TresLibrosconFechaPubRecienteJava());
 
 //Imprimir libros con más de 400 páginas
-ImprimirValores(queries.TercerCuartoLibroConMas400Paginas());
+//ImprimirValores(queries.TercerCuartoLibroConMas400Paginas());
+
+
+//Cantidad de libros que tienen entre 200 y 500 páginas con COUNT:
+//Console.WriteLine($"Cantidad de libros entre 200 y 500 páginas: {queries.cuentaLibrosMasDe200Paginas()}");
+
+//La mínima Fecha de Publicación de la lista de libros:
+//Console.WriteLine($"La fecha de publicación mínima es: {queries.minimaFachaPublicacionDeLibros()}");
+
+//Mostrar el conteo del número mayor de páginas de la lista de libros existentes:
+//Console.WriteLine($"El libro con mayor número de páginas, tiene en total {queries.cantidadLibrosConMayorNumeroPaginas()} páginas");
+
+//Libro con menor numero de paginas y que sea mayor a cero.
+//var libroMenorPag = queries.libroConMenorCantidadDePaginasMenorCero();
+//Console.WriteLine($"El libro con menor cantidad de páginas es: {libroMenorPag.Title} - {libroMenorPag.PageCount}");
+
+//Libro con fecha de publicación más reciente
+var libroFechaReciente = queries.libroConFechaMasReciente();
+Console.WriteLine($"El libro más reciente es: {libroFechaReciente.Title} y la fecha es: {libroFechaReciente.PublishedDate.ToShortDateString()} ");
 
 void ImprimirValores(IEnumerable<Book> listaDeLibros)
 {

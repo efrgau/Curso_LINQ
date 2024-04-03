@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Curso_LINQ")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f08e9b3616ffb9c6fe744070a90b761749d20c88")]
 [assembly: System.Reflection.AssemblyProductAttribute("Curso_LINQ")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Curso_LINQ")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

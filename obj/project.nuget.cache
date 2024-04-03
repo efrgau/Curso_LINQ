@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "IzcKxKnPlrYz1zzTn32y1ZFrYbW4St0iVxIK6YHpCUvzrLB0zLmgYkRV4YPFj80/RfQhkFp9u90+n9OXgPextA==",
+  "dgSpecHash": "+m4bnSqPEmEAVJrUGH73FNiLCELDY1+WkmWhJ4hnFRKUZsQilV9cy7m+xVm2w116Lq5QIcm0Q4YqvQZoUjU16Q==",
   "success": true,
-  "projectFilePath": "/home/efrgau/Documentos/RUTA C# PLATZI /Curso_LINQ/Curso_LINQ.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/home/epacheco/Documentos/CursoLinQ/repo/Curso_LINQ/Curso_LINQ.csproj",
+  "expectedPackageFiles": [
+    "/home/epacheco/.nuget/packages/microsoft.netcore.app.ref/7.0.17/microsoft.netcore.app.ref.7.0.17.nupkg.sha512",
+    "/home/epacheco/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.17/microsoft.aspnetcore.app.ref.7.0.17.nupkg.sha512",
+    "/home/epacheco/.nuget/packages/microsoft.netcore.app.host.linux-x64/7.0.17/microsoft.netcore.app.host.linux-x64.7.0.17.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -1,3 +1,4 @@
+using System.ComponentModel;
 using System.Runtime.InteropServices;
 
 public class LinqQueries
@@ -73,4 +74,30 @@ public class LinqQueries
         .Take(4)
         .Skip(2);
     }
+
+    public long cuentaLibrosMasDe200Paginas()
+    {
+        long conteoPaginasLibros = librosCollection.LongCount(p=>p.PageCount >= 200 && p.PageCount <= 500);
+        return conteoPaginasLibros;
+
+    }
+    public DateTime minimaFachaPublicacionDeLibros(){
+        return librosCollection.Min(p=>p.PublishedDate);
+    }
+    public int cantidadLibrosConMayorNumeroPaginas(){
+        return librosCollection.Max(p=>p.PageCount);
+    }
+    public Book? libroConMenorCantidadDePaginasMenorCero(){
+        return librosCollection.Where(p=>p.PageCount > 0).MinBy(p=>p.PageCount);
+    }
+    public Book? libroConFechaMasReciente(){
+        return librosCollection.MaxBy(p=>p.PublishedDate);
+    }
+    public int sumaCantidadPaginasLibrosEntre0y500(){
+        return librosCollection.Where(p=> p.PageCount >= 0 && p.PageCount <= 500).Sum(p=>p.PageCount);
+    }
+
+
+
+
 }

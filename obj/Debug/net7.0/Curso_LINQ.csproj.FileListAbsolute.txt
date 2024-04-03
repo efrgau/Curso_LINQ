@@ -13,3 +13,18 @@
 /home/efrgau/Documentos/RUTA C# PLATZI /Curso_LINQ/obj/Debug/net7.0/Curso_LINQ.pdb
 /home/efrgau/Documentos/RUTA C# PLATZI /Curso_LINQ/obj/Debug/net7.0/Curso_LINQ.genruntimeconfig.cache
 /home/efrgau/Documentos/RUTA C# PLATZI /Curso_LINQ/obj/Debug/net7.0/ref/Curso_LINQ.dll
+/home/epacheco/Documentos/CursoLinQ/repo/Curso_LINQ/bin/Debug/net7.0/Curso_LINQ
+/home/epacheco/Documentos/CursoLinQ/repo/Curso_LINQ/bin/Debug/net7.0/Curso_LINQ.deps.json
+/home/epacheco/Documentos/CursoLinQ/repo/Curso_LINQ/bin/Debug/net7.0/Curso_LINQ.runtimeconfig.json
+/home/epacheco/Documentos/CursoLinQ/repo/Curso_LINQ/bin/Debug/net7.0/Curso_LINQ.dll
+/home/epacheco/Documentos/CursoLinQ/repo/Curso_LINQ/bin/Debug/net7.0/Curso_LINQ.pdb
+/home/epacheco/Documentos/CursoLinQ/repo/Curso_LINQ/obj/Debug/net7.0/Curso_LINQ.GeneratedMSBuildEditorConfig.editorconfig
+/home/epacheco/Documentos/CursoLinQ/repo/Curso_LINQ/obj/Debug/net7.0/Curso_LINQ.AssemblyInfoInputs.cache
+/home/epacheco/Documentos/CursoLinQ/repo/Curso_LINQ/obj/Debug/net7.0/Curso_LINQ.AssemblyInfo.cs
+/home/epacheco/Documentos/CursoLinQ/repo/Curso_LINQ/obj/Debug/net7.0/Curso_LINQ.csproj.CoreCompileInputs.cache
+/home/epacheco/Documentos/CursoLinQ/repo/Curso_LINQ/obj/Debug/net7.0/Curso_LINQ.sourcelink.json
+/home/epacheco/Documentos/CursoLinQ/repo/Curso_LINQ/obj/Debug/net7.0/Curso_LINQ.dll
+/home/epacheco/Documentos/CursoLinQ/repo/Curso_LINQ/obj/Debug/net7.0/refint/Curso_LINQ.dll
+/home/epacheco/Documentos/CursoLinQ/repo/Curso_LINQ/obj/Debug/net7.0/Curso_LINQ.pdb
+/home/epacheco/Documentos/CursoLinQ/repo/Curso_LINQ/obj/Debug/net7.0/Curso_LINQ.genruntimeconfig.cache
+/home/epacheco/Documentos/CursoLinQ/repo/Curso_LINQ/obj/Debug/net7.0/ref/Curso_LINQ.dll
