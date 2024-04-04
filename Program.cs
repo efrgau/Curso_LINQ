@@ -45,8 +45,20 @@ LinqQueries queries = new LinqQueries();
 //Console.WriteLine($"El libro con menor cantidad de páginas es: {libroMenorPag.Title} - {libroMenorPag.PageCount}");
 
 //Libro con fecha de publicación más reciente
-var libroFechaReciente = queries.libroConFechaMasReciente();
-Console.WriteLine($"El libro más reciente es: {libroFechaReciente.Title} y la fecha es: {libroFechaReciente.PublishedDate.ToShortDateString()} ");
+//var libroFechaReciente = queries.libroConFechaMasReciente();
+//Console.WriteLine($"El libro más reciente es: {libroFechaReciente.Title} y la fecha es: {libroFechaReciente.PublishedDate.ToShortDateString()} ");
+
+//Suma de páginas de todos los libros con páginas entre 
+//Console.WriteLine($"La suma de todas las páginas de los libros entre 0 a 500 páginas es: { queries.sumaCantidadPaginasLibrosEntre0y500()} páginas en total");
+
+//Libros publicados después del 2015
+//Console.WriteLine($"Estos son los libros {queries.librosconFechaPublicacionPosterior2015()}");
+
+//Promedio de caracteres de la lista de libros
+//Console.WriteLine($"Promedio de caracteres de la lista de libros:{queries.promedioCaracteresTitulo()}");
+
+//Grupos de libros que son mayores al año 2000.
+ImprimirGrupo(queries.librosDespuesdel2000AgrupadosPorAnio());
 
 void ImprimirValores(IEnumerable<Book> listaDeLibros)
 {
@@ -54,6 +66,22 @@ void ImprimirValores(IEnumerable<Book> listaDeLibros)
     foreach (var item in listaDeLibros)
     {
         System.Console.WriteLine("{0, -60} {1,9} {2,11}\n", item.Title, item.PageCount, item.PublishedDate.ToShortDateString());
+    }
+
+}
+
+void ImprimirGrupo(IEnumerable<IGrouping<int,Book>> ListadeLibros)
+{
+    foreach (var grupo in ListadeLibros)
+    {
+        Console.WriteLine("");
+        System.Console.WriteLine($"Grupo: { grupo.Key }");
+        System.Console.WriteLine("{0, -60} {1,9} {2,11}\n", "Title", "N. Paginas", "Fecha publicacion");
+
+        foreach(var item in grupo){
+            System.Console.WriteLine("{0, -60} {1,9} {2,11}\n", item.Title, item.PageCount, item.PublishedDate.ToShortDateString());
+        }
+        
     }
 
 }

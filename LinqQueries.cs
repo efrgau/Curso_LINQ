@@ -96,6 +96,27 @@ public class LinqQueries
     public int sumaCantidadPaginasLibrosEntre0y500(){
         return librosCollection.Where(p=> p.PageCount >= 0 && p.PageCount <= 500).Sum(p=>p.PageCount);
     }
+    public string librosconFechaPublicacionPosterior2015(){
+        return librosCollection.
+        Where(p=>p.PublishedDate.Year > 2015).
+        Aggregate("",(TitulosLibros, next) =>
+        {
+            if(TitulosLibros != string.Empty){
+                TitulosLibros += " - " + next.Title;
+
+            }else{
+                TitulosLibros += next.Title;
+            }
+            return TitulosLibros;
+        });
+    }
+    public double promedioCaracteresTitulo (){
+        return librosCollection.Average(p=>p.Title.Length);
+    }
+
+    public IEnumerable<IGrouping<int, Book>> librosDespuesdel2000AgrupadosPorAnio(){
+        return librosCollection.Where(p=>p.PublishedDate.Year >= 2000).GroupBy(p=>p.PublishedDate.Year);
+    }
 
 
 
