@@ -117,6 +117,17 @@ public class LinqQueries
     public IEnumerable<IGrouping<int, Book>> librosDespuesdel2000AgrupadosPorAnio(){
         return librosCollection.Where(p=>p.PublishedDate.Year >= 2000).GroupBy(p=>p.PublishedDate.Year);
     }
+    public ILookup<char,Book> diccionarioDeLibrosPorLetra(){
+        return librosCollection.ToLookup(p=>p.Title[0], p=>p);
+    }
+
+    public IEnumerable<Book> LibrosDespuesdel2005ConMasDe500Pags(){
+        var LibrosDespuesDel2005 = librosCollection.Where(p=>p.PublishedDate.Year > 2005);
+
+        var LibrosConMas500Pag = librosCollection.Where(p=>p.PageCount > 500);
+
+        return LibrosDespuesDel2005.Join(LibrosConMas500Pag, p=> p.Title, x => x.Title, (p,x)=> p);
+    }
 
 
 

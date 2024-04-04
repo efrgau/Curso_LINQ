@@ -58,7 +58,15 @@ LinqQueries queries = new LinqQueries();
 //Console.WriteLine($"Promedio de caracteres de la lista de libros:{queries.promedioCaracteresTitulo()}");
 
 //Grupos de libros que son mayores al año 2000.
-ImprimirGrupo(queries.librosDespuesdel2000AgrupadosPorAnio());
+//ImprimirGrupo(queries.librosDespuesdel2000AgrupadosPorAnio());
+
+//Diccionario de libros agrupados por primera letra del titulo del libro.
+// var diccionarioLookup = queries.diccionarioDeLibrosPorLetra();
+// ImprimirDiccionario(diccionarioLookup, 'S');
+
+//Libros filtrada por la clausula join
+ImprimirValores(queries.LibrosDespuesdel2005ConMasDe500Pags());
+
 
 void ImprimirValores(IEnumerable<Book> listaDeLibros)
 {
@@ -82,6 +90,14 @@ void ImprimirGrupo(IEnumerable<IGrouping<int,Book>> ListadeLibros)
             System.Console.WriteLine("{0, -60} {1,9} {2,11}\n", item.Title, item.PageCount, item.PublishedDate.ToShortDateString());
         }
         
+    }
+
+}
+
+void ImprimirDiccionario(ILookup<char, Book> ListaDeLibros, char letra){
+    System.Console.WriteLine("{0, -60} {1,9} {2,11}\n", "Title", "N. Paginas", "Fecha publicacion");
+    foreach(var item in ListaDeLibros[letra]){
+        System.Console.WriteLine("{0, -60} {1,9} {2,11}\n", item.Title, item.PageCount, item.PublishedDate.ToShortDateString());
     }
 
 }
